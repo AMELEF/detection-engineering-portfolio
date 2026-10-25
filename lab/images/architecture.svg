@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="220" viewBox="0 0 640 220" font-family="Segoe UI, sans-serif" font-size="14">
+  <rect width="640" height="220" fill="#f6f7f9"/>
+  <g fill="#ffffff" stroke="#5f6b76" stroke-width="1.5">
+    <rect x="30" y="30" width="140" height="50" rx="6"/>
+    <rect x="30" y="140" width="140" height="50" rx="6"/>
+    <rect x="250" y="85" width="140" height="50" rx="6"/>
+    <rect x="470" y="85" width="140" height="50" rx="6"/>
+  </g>
+  <g fill="#1d2125" text-anchor="middle">
+    <text x="100" y="60">attacker</text>
+    <text x="100" y="170">win-client / dc01</text>
+    <text x="320" y="115">log forwarder</text>
+    <text x="540" y="115">siem</text>
+  </g>
+  <g stroke="#2457c5" stroke-width="1.5" fill="none">
+    <path d="M100 80 V140"/>
+    <path d="M170 165 H210 V110 H250"/>
+    <path d="M390 110 H470"/>
+  </g>
+  <g fill="#5f6b76" font-size="12">
+    <text x="108" y="114">techniques</text>
+    <text x="400" y="102">events</text>
+  </g>
+</svg>

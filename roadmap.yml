@@ -1,0 +1,96 @@
+# Portfolio roadmap.
+# Each step: id (unique), title, status (todo | in-progress | done), path (folder holding its README.md).
+# The site reads this file on load; edit it and refresh the page.
+
+phases:
+  - id: phase-1
+    title: "Phase 1 - Lab"
+    steps:
+      - id: lab
+        title: "Build the detection lab"
+        status: in-progress
+        path: lab
+      - id: rule-01
+        title: "Rule 01 - First detection, end to end"
+        status: todo
+        path: rules/rule-01
+
+  - id: phase-2
+    title: "Phase 2 - Rules 02 to 06, purple exercise 1"
+    steps:
+      - id: rule-02
+        title: "Rule 02"
+        status: todo
+        path: rules/rule-02
+      - id: rule-03
+        title: "Rule 03"
+        status: todo
+        path: rules/rule-03
+      - id: rule-04
+        title: "Rule 04"
+        status: todo
+        path: rules/rule-04
+      - id: rule-05
+        title: "Rule 05"
+        status: todo
+        path: rules/rule-05
+      - id: rule-06
+        title: "Rule 06"
+        status: todo
+        path: rules/rule-06
+      - id: purple-01
+        title: "Purple team exercise 1"
+        status: todo
+        path: purple/exercise-01
+
+  - id: phase-3
+    title: "Phase 3 - Rules 07 to 12, purple exercise 2, CI"
+    steps:
+      - id: rule-07
+        title: "Rule 07"
+        status: todo
+        path: rules/rule-07
+      - id: rule-08
+        title: "Rule 08"
+        status: todo
+        path: rules/rule-08
+      - id: rule-09
+        title: "Rule 09"
+        status: todo
+        path: rules/rule-09
+      - id: rule-10
+        title: "Rule 10"
+        status: todo
+        path: rules/rule-10
+      - id: rule-11
+        title: "Rule 11"
+        status: todo
+        path: rules/rule-11
+      - id: rule-12
+        title: "Rule 12"
+        status: todo
+        path: rules/rule-12
+      - id: purple-02
+        title: "Purple team exercise 2"
+        status: todo
+        path: purple/exercise-02
+      - id: ci
+        title: "CI pipeline for rule validation"
+        status: todo
+        path: rules/ci
+
+  - id: phase-4
+    title: "Phase 4 - Purple exercise 3, review, interview stories"
+    steps:
+      - id: purple-03
+        title: "Purple team exercise 3"
+        status: todo
+        path: purple/exercise-03
+      - id: review
+        title: "Portfolio review"
+        status: todo
+        path: rules/review
+      - id: interview-stories
+        title: "Interview stories"
+        status: todo
+        path: purple/interview-stories
