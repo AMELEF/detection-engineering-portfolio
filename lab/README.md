@@ -50,6 +50,17 @@ Each VM has two adapters: NAT for Internet access, and the host-only network for
 
 End-to-end chain tested with Atomic Red Team T1069.002 (Permission Groups Discovery: Domain Groups): the events reached Elasticsearch and the "Enumeration of Administrator Accounts" rule fired an alert in Kibana.
 
+Attacker path tested from Kali Linux (eth1 on the host-only network, static 192.168.56.240/24 via NetworkManager, DC01 as its only DNS server with `lab.local` as search domain): a failed SMB authentication against WS01 generated event 4625, visible in Elasticsearch with `source.ip` 192.168.56.240.
+
+```sh
+nxc smb 192.168.56.40 -u testfail -p WrongPass123 -d lab.local
+```
+
+## Troubleshooting
+
+- **SMB timeout from Kali to WS01:** the host-only adapter of WS01 ("Ethernet 2") had a /32 prefix instead of /24, so WS01 sent its replies through the NAT adapter and TCP 445 was unreachable. Fixed by recreating the address as 192.168.56.40/24.
+- **SMB firewall rule:** the host-only adapter has no gateway, so Windows keeps it in the Public profile. An inbound rule on WS01 allows TCP 445 only from 192.168.56.0/24, for all profiles.
+
 ## Status
 
 - [x] Host-only network and static addressing
@@ -58,4 +69,4 @@ End-to-end chain tested with Atomic Red Team T1069.002 (Permission Groups Discov
 - [x] Sysmon deployed
 - [x] Elastic Agent enrolled on both Windows hosts
 - [x] First Atomic Red Team test detected end to end
-- [ ] Kali Linux integrated into the attack workflow
+- [x] Kali Linux integrated into the attack workflow

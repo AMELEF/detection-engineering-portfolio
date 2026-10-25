@@ -8,7 +8,7 @@ phases:
     steps:
       - id: lab
         title: "Build the detection lab"
-        status: in-progress
+        status: done
         path: lab
       - id: rule-01
         title: "Rule 01 - First detection, end to end"
